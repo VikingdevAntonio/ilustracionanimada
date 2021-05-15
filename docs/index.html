@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Milogo</a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </header>
+        <section>
+            <img src="./stars.png" id="stars">
+            <img src="./stars2.png" id="stars2">
+            <img src="./moon.png" id="moon">
+            <h2 id="text"> Jazmin Arcelia</h2>
+            <img src="./rock.png" id="rock">
+            <img src="./masjid.png" id="masjid">
+            <img src="./lamp.png" id="lamp">
+        </section>
+        <div class="sec">
+            <h2>subtitulo prueba</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor neque non tristique vulputate. Duis sollicitudin mauris nec velit vestibulum tincidunt. Donec quis imperdiet ante, ac pellentesque lorem. Donec interdum, lorem at mattis efficitur, nulla nisi egestas nibh, et condimentum sem erat non elit. Suspendisse dapibus lobortis risus, vel ultricies purus condimentum at. Nulla et leo euismod, pharetra sapien eu, pellentesque nisl. Mauris tristique, tellus vitae pretium pulvinar, felis lectus suscipit nisi, ac condimentum arcu nulla nec est. Duis semper quam id volutpat ornare. Proin at purus nec tellus lobortis ornare eget a velit. Quisque tempus tempus dictum. In sagittis nisi et mi ullamcorper efficitur. Nulla fermentum tempus sapien, et maximus est fermentum eget. Phasellus id iaculis ex. Integer placerat quam eget mauris mollis, sit amet condimentum dui venenatis. Curabitur id elit tristique, euismod ligula in, scelerisque quam.</p>
+<br><p>Duis eu turpis accumsan, tempus nulla id, pulvinar tortor. Quisque nisl justo, ultricies ac ultricies eu, porta a lectus. Phasellus venenatis tellus at orci dignissim, mattis consequat velit condimentum. Aliquam ac risus ac dolor mattis ultricies eu eget nisi. Aliquam rhoncus orci vitae nisi rutrum gravida. Vestibulum non tortor porttitor, porta nulla id, fringilla arcu. Phasellus non dapibus odio, lobortis interdum lacus. Sed risus mi, dignissim vel purus vel, ullamcorper ultricies justo. Mauris sed mauris vestibulum, eleifend dui eget, porta ipsum. Praesent at turpis erat. Nam placerat auctor tristique.</p>
+<br><p>
+Sed mattis interdum mi non mattis. Nullam lacinia, sem id gravida ornare, ligula leo rhoncus diam, eu placerat justo magna eget sem. Sed enim lorem, maximus eu mauris quis, molestie feugiat dui. In mattis pulvinar sem sit amet bibendum. In aliquam quam aliquet urna malesuada tincidunt. Vestibulum euismod tortor tellus, vel feugiat urna laoreet quis. Sed tempor cursus massa viverra euismod. Suspendisse sit amet massa vitae libero ultricies volutpat. Nam ut eros ut odio porta elementum. Nullam porta leo odio, id placerat nulla lacinia ut. Nulla facilisi. Suspendisse sodales justo vel risus dapibus, in placerat leo posuere. Pellentesque ex elit, scelerisque nec pharetra in, venenatis sit amet nulla. Nam vel accumsan dolor. Vestibulum at tortor pulvinar, porttitor magna eget, convallis leo.</p>
+<br><p>
+Fusce vitae dolor consectetur, imperdiet elit id, posuere tellus. Duis tincidunt ex id cursus ullamcorper. Sed sodales ex nec risus dictum sollicitudin. Sed dictum lacus sit amet felis euismod, nec semper dolor porttitor. Sed feugiat nulla et fermentum molestie. Ut at mollis nunc. Curabitur efficitur, felis eget viverra blandit, velit lacus interdum risus, dignissim viverra lorem odio a urna. Ut sagittis tellus et interdum auctor. Ut accumsan ligula eget ante ultricies condimentum.</p>
+<br><p>
+Praesent varius facilisis leo at luctus. Quisque sit amet urna vitae magna suscipit elementum. Vestibulum turpis nulla, dapibus at viverra quis, tempus vitae mauris. In elementum ultrices tortor. Maecenas venenatis urna turpis, eget accumsan lacus commodo sed. Donec quis ex odio. Vestibulum eget scelerisque lorem. Proin justo libero, venenatis vel quam eget, rhoncus pretium tortor.</p>
+        </div>
+        <script>
+
+            let stars = document.getElementById('stars');
+            let stars2 = document.getElementById('stars2');
+            let moon = document.getElementById('moon');
+            let rock = document.getElementById('rock');
+            let masjid = document.getElementById('masjid');
+            let text = document.getElementById('text');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.bottom = value * 0.05 + '%';
+                stars2.style.bottom = value * 0.025 + '%';
+                moon.style.bottom = value * -0.5 + 'px';
+                rock.style.bottom = value * -0.75 + 'px';
+                masjid.style.bottom = value * -0.15 + 'px';
+                text.style.right = -100 + value * 0.5 + '%';
+                text.style.top = 50 + value * 0.1 + '%';
+            })
+
+
+            const toggleMenu = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.onclick = function(){
+                toggleMenu.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+        
+    </body>
+</html>
